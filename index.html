@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Final assignment</title>
+
+
+
+
+
+</head>
+
+<body>
+
+
+    <style>
+        *{
+		box-sizing:border-box;
+		scroll-behavior: smooth;
+	}
+	ul{
+		list-style:none;
+	}
+	a{
+		text-decoration:none;
+	}
+	.main{
+		width:100%;
+		height:100vh
+        ;
+		position: relative;
+	}
+	nav{		
+		align-items: center;
+		box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+		position: fixed;
+		z-index: 1;
+		background-color: antiquewhite;
+	}
+	nav ul{
+		display: flex;
+	}
+	nav ul li a{
+		height:40px;
+		line-height: 43px;
+		margin: 3px;
+		padding: 0px 22px;
+		font-size: 30px;
+		text-transform: uppercase;
+		font-weight: 500;
+		color:#585b5b;
+		letter-spacing: 1px;
+	}
+
+
+
+    nav ul li a:hover { background-color: rgb(255, 221, 177);
+		color: black;
+		box-shadow: 5px 10px 30px rgba(64,198,196,0.3);
+		transition: all ease 0.2s; }
+    .whole{
+		width:100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+        margin: 0px 0px 0px 0px;
+        
+	}
+	.photo{
+		width:500px;
+		height: 500px;
+       
+	}
+	.photo img{
+		width:70%;
+		height: 70%;
+		object-fit: contain;
+        margin: 100px 0px 0px 100px;
+	}
+	.text{
+		width:500px;
+		padding-left: 20px;
+	}
+	.text h1{
+		font-size: 3.5rem;
+		color:#1c3548;
+		margin:0px 0px 10px 0px;
+		line-height: 60px;
+	}
+	.text p{
+		color:#747474;
+		
+	}
+         
+
+        #hobbies{
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: -10px 500px 30px 500px;    width: 100%;
+        margin: 0px 0px 0px 0px; 
+        
+	}
+	.hobbies-heading{
+		color: #1c3548;
+		font-size: 2.5rem;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; 
+        width: 100%;
+        height: 100%;
+          }
+
+.hobbies-heading:hover { background-color: rgb(255, 221, 177);
+		color: black;
+		box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
+		transition: all ease 0.2s; }
+
+
+        .coding-heading{ width: 670px }
+        .gn {  size: 110px ;  }    
+        .coding-photo{ width: 670px }
+
+
+
+        #rolemodel{
+		width:100%;
+		border-top: 1px solid rgba(58,58,58,0.03);
+		border-bottom: 1px solid rgba(58,58,58,0.03);
+		padding: 50px 0px;
+		background-position: center;
+		background-size: 1000px;
+        flex-direction: column;
+	}
+	.rolemodel-heading{
+		color: #1c3548;
+		font-size: 2.5rem;
+		margin:0px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+        
+
+        
+	}
+
+    .rolemodel-heading:hover { background-color: rgb(255, 221, 177);
+		color: black;
+		box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.3);
+		transition: all ease 0.2s; }
+	.rm-box-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin:20px 0px;
+	}
+	.rolemodel-box {
+		width:310px;
+		height: 350px;
+		background-color: #FFFFFF;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 10px;
+		margin: 20px;
+		box-shadow: 5px 10px 30px rgba(0,0,0,0.08);
+	}
+	.rolemodel-box img{
+		width:150px;
+		height: 150px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	.rolemodel-box strong{
+		color:#585b5b;
+		margin:0px;
+		font-size: 30px;
+		font-weight: 600;
+		margin-top:10px;
+	}
+	
+	.rolemodel-box p{
+		color:#000000;
+		font-size: 0.9rem;
+		margin:0px;
+		text-align: center;
+		display: block;
+		display: -webkit-box;
+		max-width: 80%;
+		-webkit-line-clamp:4;
+		-webkit-box-orient:vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}	
+	.rolemodel-box:hover{
+		transform: translateY(-10px);
+		box-shadow: 5px 10px 30px rgba(0,0,0,0.1);
+		background-color: rgb(255, 221, 177);
+		transition: all ease 0.2s;}
+
+        .contact-heading { 
+        color: #1c3548;
+		font-size: 2.5rem;
+		margin:0px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column; 
+        height: 110px;
+    }
+
+
+   
+
+        </style>
+
+
+      
+
+<section class="main">
+   <nav class="navbar">
+        <ul>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#hobbies">My Hobbies</a></li>
+        <li><a href="#rolemodel">My Role Models</a></li>
+        <li><a href="#dreams">My Dreams</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+    </nav> 
+</section>
+    <section class="whole">
+
+    <div class="photo">
+
+<img  src=" 89.jpeg" width="400x" height="400x" />
+
+</div>
+
+<div class="text">
+<h1 style=" background-color: rgb(255, 221, 177);"> Hello, I am Omer Balwari</h1>
+<p style=" background-color: rgb(255, 221, 177); font-size: 20px; "> Welcome to my creative website</p>
+</div>
+</section>
+<section  id="hobbies">
+    <div class="hobbies-heading">
+    <h1>My Hobbies</h1>
+</div>
+<div class="ff">
+    <div>
+        
+        <h1 style="font-size: 50px; color: rgb(192, 139, 104);">FREE FIRE</h1>
+    </div>
+
+    
+    <div>
+        <img  src="https://esportsgen.com/wp-content/uploads/2021/07/2584226-755536616.jpg">
+        
+        <p>A legendary player of Free Fire. </p>
+    </div>
+
+    
+     </div>
+     <div class="coding">
+         
+        <div class="coding-heading">
+        
+        <h1 style="font-size: 50px; color: rgb(192, 139, 104);" class="aan">CODING</h1>
+    </div>
+
+    <div>
+        <img  src="https://www.desktophut.com/wp-content/uploads/2020/08/mpc-hc64_ndroh0NOVN.jpg.webp"
+        class="coding-photo">
+        <p> A very curious learner for knowledge </p>
+    </div> </div> 
+
+
+</section>
+<section id="rolemodel">
+
+    <div class="rolemodel-heading">
+        <h1>MY ROLE MODELS        </h1>
+    </div>
+    <div class="rm-box-container">
+
+
+        <div class="rolemodel-box" prophet muhammad > 
+            <img src="https://cdn.siasat.com/wp-content/uploads/2020/11/Muhammad.jpg">
+            <strong>Prophet Muhammad</strong>
+
+            <p style="font-size: 20px;">"Do salam, before talking" </p>
+
+
+        </div>
+
+
+
+
+        <div class="rolemodel-box" newton > 
+            <img src="https://i.natgeofe.com/n/faf6f6b2-3d6f-4fee-82ed-77a2f28c0063/11606.jpg">
+            <strong>Isaac newton</strong>
+
+            <p style="font-size: 20px;">"What we know is a drop, what we dont know is an ocean. " </p>
+
+
+        </div>
+
+        
+
+
+
+        <div class="rolemodel-box" elon musk > 
+            <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f47d4de7637290765bce495%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1699%26cropX2%3D3845%26cropY1%3D559%26cropY2%3D2704">
+            <strong>elon musk</strong>
+
+            <p style="font-size: 20px;">"I could either watch it <br>   
+                 happen or be a part of it." </p>
+
+
+        </div>
+    </div>
+</section>
+<section id="contact">
+
+    <div class="contact-heading">
+        <h1>CONTACT ME</h1></br></br>
+    </div>
+
+
+    <div align="center" class="contact-input" >
+		<form action="#">
+		Your full name:
+		<input type="text" name="UserName" size=35 maxlength=35 value=""></br></br>
+		Contact number:
+		<input type="text" name="UserName" size=35 maxlength=35 value=""></br></br>
+         Your E-mail ID:
+		<input type="email" name="emailID" size=36 maxlength=36 value=""></br></br>
+		What's your gender?
+		<input type="radio" name="exe" value=1>Male
+		<input type="radio" name="exe" value=2>Female
+        <input type="radio" name="exe" value=3>Custom
+        <input type="radio" name="exe" value=4>Rather not say
+		</br></br>
+		Where do you live currently?
+		<select name="occupation" ><option>
+		<option value=1 >Asia
+		<option value=2 >Europe
+		<option value=3 >Africa
+		<option value=4 >North America
+            <option value=5 >South America
+                <option value=6 >Australia
+                    <option value=7 >Not in world
+		</select>
+		</br></br>
+		<input type=submit value="Submit" >
+		</form>
+	</div>
+
+</section>
+
+</body>
+</html>
